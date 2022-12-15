@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mocha\\.nuget\\packages\\": {}
+    "C:\\Users\\Nando\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositories\\frontend\\frontend\\frontend\\frontend.csproj",
+      "projectUniqueName": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\project\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
       "projectName": "frontend",
-      "projectPath": "D:\\Repositories\\frontend\\frontend\\frontend\\frontend.csproj",
-      "packagesPath": "C:\\Users\\Mocha\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositories\\frontend\\frontend\\frontend\\obj\\",
+      "projectPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\project\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+      "packagesPath": "C:\\Users\\Nando\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\project\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Mocha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

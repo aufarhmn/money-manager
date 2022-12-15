@@ -1,5 +1,5 @@
 ﻿frontend
-1.0.0.0
+
 
 winexe
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\project\moneymanager-aspnet\frontend\frontend\App.xaml
-5-1157228842
+1-1623698816
 
-9-560399549
+3-961429339
 194-200944676
-CreatePage.xaml;CreatePengeluaranPage.xaml;EditPemasukan.xaml;EditPengeluaran.xaml;LoginWindow.xaml;
+LoginWindow.xaml;
 
-False
+True
 
