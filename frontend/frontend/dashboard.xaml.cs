@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace frontend
 {
     /// <summary>
-    /// Interaction logic for CreatePage.xaml
+    /// Interaction logic for dashboard.xaml
     /// </summary>
-    public partial class CreatePage : Page
+    public partial class dashboard : Page
     {
-        public CreatePage()
+        public dashboard()
         {
             InitializeComponent();
         }

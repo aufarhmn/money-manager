@@ -13,6 +13,6 @@
         <TextBox HorizontalAlignment="Left" Margin="302,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Height="40"/>
         <Label x:Name="pemasukan" Content="Jumlah Pemasukan" HorizontalAlignment="Left" Margin="111,161,0,0" VerticalAlignment="Top" Height="35" Width="167" FontSize="18"/>
         <TextBox HorizontalAlignment="Left" Margin="302,161,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Height="44"/>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="302,275,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="302,275,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Button_Click"/>
     </Grid>
 </Page>

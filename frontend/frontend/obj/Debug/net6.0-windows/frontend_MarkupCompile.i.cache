@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\project\moneymanager-aspnet\frontend\frontend\App.xaml
-5-1157228842
+6-490318137
 
-9-560399549
+10-750798977
 194-200944676
-CreatePage.xaml;CreatePengeluaranPage.xaml;EditPemasukan.xaml;EditPengeluaran.xaml;LoginWindow.xaml;
+CreatePage.xaml;CreatePengeluaranPage.xaml;dashboard.xaml;EditPemasukan.xaml;EditPengeluaran.xaml;LoginWindow.xaml;
 
-False
+True
 
