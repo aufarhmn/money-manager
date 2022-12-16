@@ -2,36 +2,51 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="CreatePage.xaml.cs">
+    <Compile Update="Pages\CreatePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CreatePengeluaranPage.xaml.cs">
+    <Compile Update="Pages\CreatePengeluaranPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="dashboard.xaml.cs">
+    <Compile Update="Pages\dashboard.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="EditPemasukan.xaml.cs">
+    <Compile Update="Pages\EditPemasukan.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="EditPengeluaran.xaml.cs">
+    <Compile Update="Pages\EditPengeluaran.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="CreatePage.xaml">
+    <Page Update="Pages\CreatePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="CreatePengeluaranPage.xaml">
+    <Page Update="Pages\CreatePengeluaranPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="dashboard.xaml">
+    <Page Update="Pages\dashboard.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="EditPemasukan.xaml">
+    <Page Update="Pages\EditPemasukan.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="EditPengeluaran.xaml">
+    <Page Update="Pages\EditPengeluaran.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

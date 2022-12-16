@@ -69,7 +69,7 @@ namespace frontend {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/frontend;V1.0.0.0;component/createpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/frontend;component/createpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CreatePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
