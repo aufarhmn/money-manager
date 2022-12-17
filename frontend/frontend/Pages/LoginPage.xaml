@@ -9,6 +9,9 @@
       Title="LoginPage">
 
     <Grid Background="#FF3A167D">
-        <Label Content="LOGIN DLU MAMANK" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" Foreground="White"/>
+        <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="280" Height="69" Margin="0,47,0,0"/>
+        <TextBox HorizontalAlignment="Center" Height="26" Margin="0,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="314"/>
+        <TextBox HorizontalAlignment="Center" Height="26" Margin="0,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="314"/>
+        <Button Content="Button" HorizontalAlignment="Center" Height="42" Margin="0,333,0,0" VerticalAlignment="Top" Width="130"/>
     </Grid>
 </Page>
