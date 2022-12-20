@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,20 +24,46 @@ namespace frontend
         {
             InitializeComponent();
             // set loginpage uri
-            navframe.Navigate(new Uri("Pages/LoginPage.xaml", UriKind.Relative));
-
+            navframe.Navigate(new Uri("Pages/LandingPage.xaml", UriKind.Relative));
         }
-        
+
+        //Attributes
+        private string username;
+
+
+        //Encapsulation
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
         private void NavButton_Selected(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        //Navigations
+
+        public void Navigate(string page)
+        {
+            Uri pageUri = new Uri("/Pages/" + page + ".xaml", UriKind.Relative);
+            navframe.Navigate(pageUri);
         }
 
         private void sidebar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selected = sidebar.SelectedItem as NavButton;
 
-            navframe.Navigate(selected.NavLink);
+            // Navigation auth protection
+            if(this.Username != null)
+            {
+                navframe.Navigate(selected.NavLink);
+            }
+            else
+            {
+                MessageBox.Show("Please authenticate yourself.");
+            }
         }
     }
 }

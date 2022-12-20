@@ -1,10 +1,8 @@
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.csproj.AssemblyReference.cache
-D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\LoginWindow.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\App.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend_MarkupCompile.cache
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend_MarkupCompile.lref
-D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\LoginWindow.baml
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.dll
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\refint\frontend.dll
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.pdb
@@ -24,12 +22,10 @@ D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\ref\fro
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\MainWindow.baml
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePage.g.cs
-D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePengeluaranPage.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\dashboard.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\EditPemasukan.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\EditPengeluaran.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePage.baml
-D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePengeluaranPage.baml
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\dashboard.baml
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\EditPemasukan.baml
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\EditPengeluaran.baml
@@ -78,3 +74,14 @@ D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew\moneymanager-aspnet\fronten
 D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\SignUp.g.cs
 D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\LandingPage.baml
 D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\SignUp.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePengeluaran.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\LandingPage.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\maindashboard.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\SignUp.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\CreatePengeluaran.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\LandingPage.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\maindashboard.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\SignUp.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\App.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\DashboardPage.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\DashboardPage.baml

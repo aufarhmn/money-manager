@@ -24,5 +24,25 @@ namespace frontend.Pages
         {
             InitializeComponent();
         }
+
+        private void Login(object sender, RoutedEventArgs e)
+        {
+            string username = UsernameTextBox.Text;
+            string password = PasswordBox.Password;
+
+            if (username != "" && password != "")
+            {
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                mainWindow.Username = username;
+                MessageBox.Show("Login Success, Welcome " + username);
+                mainWindow.Navigate("DashboardPage");
+                
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the forms.");
+            }
+            
+        }
     }
 }

@@ -29,21 +29,25 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="379,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Margin="379,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Margin="379,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="379,224,0,0" Password="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <PasswordBox.Style>
+                <Style TargetType="{x:Type PasswordBox}">
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8" />
+                        </Style>
+                    </Style.Resources>
                 </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <Button Content="Login" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Height="50" Width="224" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+            </PasswordBox.Style>   
+        </PasswordBox>
+        <Button Content="Login" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Height="50" Width="224" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Click="Login">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

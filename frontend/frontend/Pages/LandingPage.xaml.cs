@@ -24,5 +24,19 @@ namespace frontend.Pages
         {
             InitializeComponent();
         }
+
+        //Navigations
+        private void NavigateToLogin(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            mainWindow.Navigate("LoginPage");
+        }
+
+        private void NavigateToSignUp(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.Navigate("SignUp");
+        }
     }
 }

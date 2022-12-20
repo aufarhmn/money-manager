@@ -13,14 +13,14 @@
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
         <Label x:Name="judulList" Content="Welcome to Money Manager" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" Height="78" Width="638" FontSize="48" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Button Content="Login" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="56" Width="324" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+        <Button Content="Login" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="56" Width="324" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Click="NavigateToLogin">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Sign Up" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="324" Background="#FFFFED41" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Margin="0,178,0,0">
+        <Button Content="Sign Up" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="324" Background="#FFFFED41" BorderBrush="#FFFFED41" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Margin="0,178,0,0" Click="NavigateToSignUp">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
