@@ -1,0 +1,33 @@
+﻿<Page x:Class="frontend.Pages.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:frontend.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LandingPage">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Pages/background.png"/>
+        </Grid.Background>
+        <Label x:Name="judulList" Content="Welcome to Money Manager" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" Height="78" Width="638" FontSize="48" Foreground="White" FontFamily="Comic Sans MS"/>
+        <Button Content="Login" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top" Height="56" Width="324" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Sign Up" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="324" Background="#FFFFED41" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Margin="0,178,0,0">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label x:Name="judulList_Copy" Content="Sudah punya akun?" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Height="38" Width="167" FontSize="18" Foreground="White" FontFamily="Comic Sans MS"/>
+
+    </Grid>
+</Page>

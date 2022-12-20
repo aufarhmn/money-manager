@@ -8,10 +8,47 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
 
-    <Grid Background="#FF3A167D">
-        <Label Content="Login&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="280" Height="69" Margin="0,47,0,0"/>
-        <TextBox HorizontalAlignment="Center" Height="26" Margin="0,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="314"/>
-        <TextBox HorizontalAlignment="Center" Height="26" Margin="0,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="314"/>
-        <Button Content="Button" HorizontalAlignment="Center" Height="42" Margin="0,333,0,0" VerticalAlignment="Top" Width="130"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Pages/background.png"/>
+        </Grid.Background>
+        <Label x:Name="judulList" Content="Login Page" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Height="66" Width="182" FontSize="36" Foreground="White" FontFamily="Comic Sans MS"/>
+        <Label x:Name="nama" Content="Username" HorizontalAlignment="Left" Margin="182,147,0,0" VerticalAlignment="Top" Height="38" Width="188" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label x:Name="pengeluaran" Content="Password" HorizontalAlignment="Left" Margin="182,224,0,0" VerticalAlignment="Top" Height="44" Width="197" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
+        <TextBox HorizontalAlignment="Left" Margin="379,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="379,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Margin="379,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button Content="Login" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top" Height="50" Width="224" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>

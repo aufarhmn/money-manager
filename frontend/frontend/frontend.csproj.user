@@ -5,7 +5,7 @@
     <Compile Update="Pages\CreatePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\CreatePengeluaranPage.xaml.cs">
+    <Compile Update="Pages\CreatePengeluaran.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\dashboard.xaml.cs">
@@ -20,7 +20,16 @@
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\LandingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\maindashboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -28,7 +37,7 @@
     <Page Update="Pages\CreatePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\CreatePengeluaranPage.xaml">
+    <Page Update="Pages\CreatePengeluaran.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\dashboard.xaml">
@@ -43,7 +52,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\LandingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\maindashboard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SignUp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">

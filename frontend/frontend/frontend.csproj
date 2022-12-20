@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Pages\34efc0115410451.604e3946f3122.png" />
+    <None Remove="Pages\background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pages\34efc0115410451.604e3946f3122.png" />
+    <Resource Include="Pages\background.png" />
+  </ItemGroup>
+
 </Project>
