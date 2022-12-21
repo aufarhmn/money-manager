@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj": {}
+    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj": {}
   },
   "projects": {
-    "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj": {
+    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+        "projectUniqueName": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
-        "packagesPath": "C:\\Users\\Nando\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
+        "projectPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +45,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.0-pre3, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"

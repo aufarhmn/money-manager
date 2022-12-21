@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Security.Policy;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,7 +16,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using System.Collections.Specialized;
 using Newtonsoft.Json.Linq;
+using static System.Net.WebRequestMethods;
+using System.Diagnostics;
+using System.Text.Json;
+using Nancy.Json;
 
 namespace frontend.Pages
 {
@@ -47,20 +55,52 @@ namespace frontend.Pages
             public User() { }
         }
 
-        public void RegisterNewUser()
+        //public void RegisterNewUser()
+        //{
+        //    User newUser = new User();
+        //    newUser.Id = Convert.ToInt32(DateTime.Now);
+        //    newUser.ClientName = UsernameTextBox.Text;
+        //    newUser.ClientPass = PasswordBox.Password;
+        //    newUser.ClientBalance = 0.ToString();
+        //    newUser.ClientExpense = 0.ToString();
+        //
+        //    string userJson = JsonConvert.SerializeObject(newUser, Formatting.Indented);
+        //}
+
+        private void Sign_Up(object sender, RoutedEventArgs e)
         {
             User newUser = new User();
-            newUser.Id = Convert.ToInt32(DateTime.Now);
             newUser.ClientName = UsernameTextBox.Text;
             newUser.ClientPass = PasswordBox.Password;
-            newUser.ClientBalance = 0.ToString();
-            newUser.ClientExpense = 0.ToString();
 
-            string userJson = JsonConvert.SerializeObject(newUser, Formatting.Indented);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://localhost:7118/api/Clients/postAll");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
 
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                string json = new JavaScriptSerializer().Serialize(new
+                {
+                    clientName = $"{UsernameTextBox.Text}",
+                    clientPass = $"{PasswordBox.Password}"
+                });
 
+                streamWriter.Write(json);
+            }
 
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                //TODO: FIX ME TO HANDLE IF FORM ISNT FILLED PROPERLY
+                if(result != null)
+                {
+                    MessageBox.Show("Registration Succses, Please Login");
+                    var mainWindow = (MainWindow)Application.Current.MainWindow;
+                    mainWindow.Navigate("LoginPage");
+                }
+            }
 
         }
     }
