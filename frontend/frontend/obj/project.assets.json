@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew2\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+      "projectUniqueName": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
       "projectName": "frontend",
-      "projectPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew2\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+      "projectPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
       "packagesPath": "C:\\Users\\Nando\\.nuget\\packages\\",
-      "outputPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew2\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
+      "outputPath": "D:\\UNIVERSITAS GADJAH MADA\\SEMESTER 3\\PBO\\projectnew3\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

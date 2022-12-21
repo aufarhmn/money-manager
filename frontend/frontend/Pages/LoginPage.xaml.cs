@@ -37,23 +37,36 @@ namespace frontend.Pages
 
         private void Login(object sender, RoutedEventArgs e)
         {
+
+
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
 
+
             if (username != "" && password != "")
             {
-                var mainWindow = (MainWindow)Application.Current.MainWindow;
-                //MessageBox.Show("Login Success, Welcome " + username);
-                
-                mainWindow.Navigate("DashboardPage");
-                var response = new WebClient().DownloadString("https://localhost:7118/api/Clients/2");
+                string url = $"https://localhost:7118/api/Clients/getByName/{username}";
+                var response = new WebClient().DownloadString(url);
                 JObject response2 = JObject.Parse(response);
-                var clientName = response2["clientName"].ToString();
-                //string[] array = JsonConvert.DeserializeObject<string[]>(response);
-                Trace.WriteLine(clientName);
-                mainWindow.Username = clientName;
 
+                if(response2 == null)
+                {
+                    MessageBox.Show("Username does not exist.");
+                }
+                else
+                {
+                    var mainWindow = (MainWindow)Application.Current.MainWindow;
+                    MessageBox.Show("Login Success, Welcome " + username);
 
+                    mainWindow.Navigate("DashboardPage");
+                    var clientName = response2["clientName"].ToString();
+                    var clientBalance = response2["clientBalance"].ToString();
+                    var clientExpense = response2["clientExpense"].ToString();
+                    Trace.WriteLine(clientName);
+                    mainWindow.Username = clientName;
+                    mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
+                    mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
+                }
             }
             else
             {

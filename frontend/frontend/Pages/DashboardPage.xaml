@@ -20,8 +20,8 @@
             </Grid.RowDefinitions>
             <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8" Grid.RowSpan="3"/>
             <Label Content="Welcome, Username!" x:Name="WelcomeLabel" FontSize="30" HorizontalAlignment="Left" Padding="10,0" Background="{x:Null}" Height="40" VerticalAlignment="Center" Width="460"/>
-            <Label Content="Balance :" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="1" FontSize="20"/>
-            <Label Content="Spent :" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="2" FontSize="20"/>
+            <Label Content="Balance :" x:Name="BalanceLabel" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="1" FontSize="20"/>
+            <Label Content="Spent :" x:Name="ExpenseLabel" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="2" FontSize="20"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="103" Margin="37,225,0,0" VerticalAlignment="Top" Width="245">
             <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8"/>

@@ -24,6 +24,8 @@ namespace frontend
         {
             InitializeComponent();
             WelcomeLabel.Content = "Welcome, " + ((MainWindow)Application.Current.MainWindow).Username +"!";
+            BalanceLabel.Content = "Balance: " + ((MainWindow)Application.Current.MainWindow).ClientBalance.ToString();
+            ExpenseLabel.Content = "Spent: " + ((MainWindow)Application.Current.MainWindow).ClientExpense.ToString();
         }
 
         

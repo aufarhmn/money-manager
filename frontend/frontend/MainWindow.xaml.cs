@@ -29,6 +29,8 @@ namespace frontend
 
         //Attributes
         private string username;
+        private int clientBalance;
+        private int clientExpense;
 
 
         //Encapsulation
@@ -36,6 +38,16 @@ namespace frontend
         {
             get { return username; }
             set { username = value; }
+        }
+        public int ClientBalance
+        {
+            get { return clientBalance; }
+            set { clientBalance = value; }
+        }
+        public int ClientExpense
+        {
+            get { return clientExpense; }
+            set { clientExpense = value; }
         }
 
         private void NavButton_Selected(object sender, RoutedEventArgs e)
