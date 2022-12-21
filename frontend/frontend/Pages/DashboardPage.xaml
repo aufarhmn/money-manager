@@ -9,25 +9,41 @@
       Title="DashboardPage">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="177" Margin="41,28,0,0" VerticalAlignment="Top" Width="726">
+        <Grid HorizontalAlignment="Left" Height="177" Margin="41,28,0,0" VerticalAlignment="Top" Width="726" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8" Grid.RowSpan="3"/>
+            <Border BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8" Grid.RowSpan="3"/>
             <Label Content="Welcome, Username!" x:Name="WelcomeLabel" FontSize="30" HorizontalAlignment="Left" Padding="10,0" Background="{x:Null}" Height="40" VerticalAlignment="Center" Width="460"/>
-            <Label Content="Balance :" x:Name="BalanceLabel" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="1" FontSize="20"/>
-            <Label Content="Spent :" x:Name="ExpenseLabel" HorizontalAlignment="Center" Padding="10, 0" Background="{x:Null}" Height="36" VerticalAlignment="Top" Width="726" Grid.Row="2" FontSize="20"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="103" Margin="37,225,0,0" VerticalAlignment="Top" Width="245">
-            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8"/>
+        <Grid HorizontalAlignment="Left" Height="103" Margin="41,10,0,0" VerticalAlignment="Top" Width="349" Grid.Row="1" RenderTransformOrigin="0.514,0.442">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="56*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" Background="White" Opacity="0.8" CornerRadius="10,10,10,10" Grid.RowSpan="2">
+            </Border>
+            <Label Content="Balance" Grid.Row="0" FontSize="20" Padding="10" Margin="0,2,0,51" Grid.RowSpan="2"/>
+            <Label x:Name="BalanceLabel" Content="Label" Grid.Row="1" Padding="10,5" FontSize="24" FontWeight="Bold" Foreground="#FF11BB23"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="103" Margin="304,225,0,0" VerticalAlignment="Top" Width="245">
-            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="White" Opacity="0.8"/>
+        <Grid HorizontalAlignment="Left" Height="103" Margin="10,10,0,0" VerticalAlignment="Top" Width="357" Grid.Column="1" Grid.Row="1" Opacity="0.8">
+            <Border BorderThickness="1" Background="White" Opacity="1" CornerRadius="10,10,10,10" Margin="8,0,0,0">
+            </Border>
+            <Label Grid.Row="0" Content="Spent" FontSize="20" Padding="10" Margin="10,0,-12,51"/>
+            <Label x:Name="ExpenseLabel" Content="Label" Padding="10,5" FontSize="24" FontWeight="Bold" Foreground="#FFBB1111" Margin="8,52,-7,-2"/>
         </Grid>
 
     </Grid>
