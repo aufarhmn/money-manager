@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj": {}
+    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj": {}
   },
   "projects": {
-    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj": {
+    "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj",
+        "projectUniqueName": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj",
         "projectName": "ClientDataAPI",
-        "projectPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj",
+        "projectPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDataAPI.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\moneymanager-aspnet\\backend\\ClientDataAPI\\obj\\",
+        "outputPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\backend\\ClientDataAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,6 +58,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

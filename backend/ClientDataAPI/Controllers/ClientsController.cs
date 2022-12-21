@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace ClientDataAPI.Controllers
 {
@@ -17,7 +18,7 @@ namespace ClientDataAPI.Controllers
         }
 
         //GET
-        [HttpGet]
+        [HttpGet("getAll")]
         public async Task<ActionResult<IEnumerable<Client>>> GetClient()
         {
             if(_dbContext.Clients == null)
@@ -29,7 +30,7 @@ namespace ClientDataAPI.Controllers
         }
 
         //GET BY ID
-        [HttpGet("{id}")]
+        [HttpGet("getById/{id}")]
         public async Task<ActionResult<Client>> GetClient(int id)
         {
             if(_dbContext.Clients == null)
@@ -47,8 +48,26 @@ namespace ClientDataAPI.Controllers
             return client;
         }
 
+        [HttpGet("getByName/{name}")]
+        public async Task<ActionResult<Client>> GetClient(string name)
+        {
+            if (_dbContext.Clients == null)
+            {
+                return NotFound();
+            }
+
+            var client = await _dbContext.Clients.FirstOrDefaultAsync(a => a.clientName == name);
+
+            if (client == null)
+            {
+                return NotFound();
+            }
+
+            return client;
+        }
+
         //POST
-        [HttpPost]
+        [HttpPost("postAll")]
         public async Task<ActionResult<Client>> PostClient(Client client)
         {
             _dbContext.Clients.Add(client);
@@ -58,7 +77,7 @@ namespace ClientDataAPI.Controllers
         }
 
         //PUT
-        [HttpPut("{id}")]
+        [HttpPut("putById/{id}")]
         public async Task<IActionResult> PutClient(int id, Client client)
         {
             if(id != client.Id)
@@ -93,7 +112,7 @@ namespace ClientDataAPI.Controllers
         }
 
         // DELETE
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteById/{id}")]
         public async Task<IActionResult> DeleteClient(int id)
         {
             if (_dbContext.Clients == null)
