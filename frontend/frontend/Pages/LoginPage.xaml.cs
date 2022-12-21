@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace frontend.Pages
 {
@@ -25,6 +29,12 @@ namespace frontend.Pages
             InitializeComponent();
         }
 
+        public class Response
+        {
+            public int id;
+            public string username;
+        }
+
         private void Login(object sender, RoutedEventArgs e)
         {
             string username = UsernameTextBox.Text;
@@ -33,15 +43,24 @@ namespace frontend.Pages
             if (username != "" && password != "")
             {
                 var mainWindow = (MainWindow)Application.Current.MainWindow;
-                mainWindow.Username = username;
-                MessageBox.Show("Login Success, Welcome " + username);
-                mainWindow.Navigate("DashboardPage");
+                //MessageBox.Show("Login Success, Welcome " + username);
                 
+                mainWindow.Navigate("DashboardPage");
+                var response = new WebClient().DownloadString("https://localhost:7118/api/Clients/2");
+                JObject response2 = JObject.Parse(response);
+                var clientName = response2["clientName"].ToString();
+                //string[] array = JsonConvert.DeserializeObject<string[]>(response);
+                Trace.WriteLine(clientName);
+                mainWindow.Username = clientName;
+
+
             }
             else
             {
                 MessageBox.Show("Please fill all the forms.");
             }
+
+
             
         }
     }

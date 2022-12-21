@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\
+D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew2\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\
 frontend
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\KODONF\moneymanager-aspnet\frontend\frontend\App.xaml
+D:\UNIVERSITAS GADJAH MADA\SEMESTER 3\PBO\projectnew2\moneymanager-aspnet\frontend\frontend\App.xaml
 12-1266163579
 
 14-193528812
-194-200944676
+195-627670513
 MainWindow.xaml;Pages\CreatePage.xaml;Pages\CreatePengeluaran.xaml;Pages\dashboard.xaml;Pages\DashboardPage.xaml;Pages\EditPemasukan.xaml;Pages\EditPengeluaran.xaml;Pages\LandingPage.xaml;Pages\LoginPage.xaml;Pages\maindashboard.xaml;Pages\SignUp.xaml;Themes\Generic.xaml;
 
 False
