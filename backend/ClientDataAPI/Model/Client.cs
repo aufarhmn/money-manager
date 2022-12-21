@@ -7,5 +7,6 @@
         public string? clientPass { get; set; }
         public double clientBalance { get; set; }
         public double clientExpense { get; set; }
+        public string? clientLog { get; set; }
     }
 }
