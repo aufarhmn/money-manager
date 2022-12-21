@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.CodeDom;
 
 namespace frontend.Pages
 {
@@ -46,26 +47,44 @@ namespace frontend.Pages
             if (username != "" && password != "")
             {
                 string url = $"https://localhost:7118/api/Clients/getByName/{username}";
-                var response = new WebClient().DownloadString(url);
-                JObject response2 = JObject.Parse(response);
-
-                if(response2 == null)
+                try
                 {
-                    MessageBox.Show("Username does not exist.");
+                    var response = new WebClient().DownloadString(url);
+                    JObject response2 = JObject.Parse(response);
+
+                    if (response2["clientPass"].ToString() == password)
+                    {
+                        var mainWindow = (MainWindow)Application.Current.MainWindow;
+                        MessageBox.Show("Login Success, Welcome " + username);
+
+                        mainWindow.Navigate("DashboardPage");
+                        var clientName = response2["clientName"].ToString();
+                        var clientBalance = response2["clientBalance"].ToString();
+                        var clientExpense = response2["clientExpense"].ToString();
+                        Trace.WriteLine(clientName);
+                        mainWindow.Username = clientName;
+                        mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
+                        mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
+                    }
+                    else
+                    {
+                        //make an exception that password is incorrect
+                        throw new Exception("Wrong password");
+                    }
                 }
-                else
+                catch(Exception ex)
                 {
-                    var mainWindow = (MainWindow)Application.Current.MainWindow;
-                    MessageBox.Show("Login Success, Welcome " + username);
-
-                    mainWindow.Navigate("DashboardPage");
-                    var clientName = response2["clientName"].ToString();
-                    var clientBalance = response2["clientBalance"].ToString();
-                    var clientExpense = response2["clientExpense"].ToString();
-                    Trace.WriteLine(clientName);
-                    mainWindow.Username = clientName;
-                    mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
-                    mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
+                    if(ex.Message.Contains("404"))
+                    {
+                        MessageBox.Show("Username does not exist.");
+                    } else if(ex.Message.Contains("500"))
+                    {
+                        MessageBox.Show("Internal Server Error");
+                    } else
+                    {
+                        MessageBox.Show("Wrong password");
+                    }
+                    
                 }
             }
             else

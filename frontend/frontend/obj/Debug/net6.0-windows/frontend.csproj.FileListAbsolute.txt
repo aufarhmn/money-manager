@@ -229,3 +229,11 @@ D:\Kuliah\Materi dan Tugas\Sem 3\Pemrograman Berbasis Obyek\Source\MoneyManager-
 D:\Kuliah\Materi dan Tugas\Sem 3\Pemrograman Berbasis Obyek\Source\MoneyManager-Monorepo\new\update\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
 D:\Kuliah\Materi dan Tugas\Sem 3\Pemrograman Berbasis Obyek\Source\MoneyManager-Monorepo\new\update\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microsoft.Extensions.PlatformAbstractions.dll
 D:\Kuliah\Materi dan Tugas\Sem 3\Pemrograman Berbasis Obyek\Source\MoneyManager-Monorepo\new\update\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Nancy.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Flurl.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Flurl.Http.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microsoft.Extensions.PlatformAbstractions.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Nancy.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.csproj.CopyComplete

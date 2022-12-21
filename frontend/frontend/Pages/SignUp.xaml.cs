@@ -73,32 +73,46 @@ namespace frontend.Pages
             newUser.ClientName = UsernameTextBox.Text;
             newUser.ClientPass = PasswordBox.Password;
 
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://localhost:7118/api/Clients/postAll");
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "POST";
-
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            try
             {
-                string json = new JavaScriptSerializer().Serialize(new
-                {
-                    clientName = $"{UsernameTextBox.Text}",
-                    clientPass = $"{PasswordBox.Password}"
-                });
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://localhost:7118/api/Clients/postAll");
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
 
-                streamWriter.Write(json);
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = new JavaScriptSerializer().Serialize(new
+                    {
+                        clientName = $"{UsernameTextBox.Text}",
+                        clientPass = $"{PasswordBox.Password}"
+                    });
+
+                    streamWriter.Write(json);
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    //TODO: FIX ME TO HANDLE IF FORM ISNT FILLED PROPERLY
+                    if (result != null)
+                    {
+                        MessageBox.Show("Registration Succses, Please Login");
+                        var mainWindow = (MainWindow)Application.Current.MainWindow;
+                        mainWindow.Navigate("LoginPage");
+                    }
+                }
             }
-
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            catch (Exception ex)
             {
-                var result = streamReader.ReadToEnd();
-                //TODO: FIX ME TO HANDLE IF FORM ISNT FILLED PROPERLY
-                if(result != null)
+                if(ex.Message.Contains("500"))
                 {
-                    MessageBox.Show("Registration Succses, Please Login");
-                    var mainWindow = (MainWindow)Application.Current.MainWindow;
-                    mainWindow.Navigate("LoginPage");
+                    MessageBox.Show("There are problems in the server");
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong");
                 }
             }
 

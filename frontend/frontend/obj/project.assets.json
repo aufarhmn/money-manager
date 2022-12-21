@@ -5667,24 +5667,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mocha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+      "projectUniqueName": "D:\\KODONF\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
       "projectName": "frontend",
-      "projectPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\new\\update\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
+      "projectPath": "D:\\KODONF\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
+      "packagesPath": "C:\\Users\\Mocha\\.nuget\\packages\\",
+      "outputPath": "D:\\KODONF\\moneymanager-aspnet\\frontend\\frontend\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Mocha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5692,7 +5687,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

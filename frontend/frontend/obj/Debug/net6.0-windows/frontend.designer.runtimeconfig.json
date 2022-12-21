@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Lenovo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Lenovo\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Mocha\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Mocha\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
