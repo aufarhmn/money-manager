@@ -20,7 +20,7 @@
             </TextBox.Resources>
         </TextBox>
         <Label x:Name="ExpenseLabel" Content="Set Pengeluaran" HorizontalAlignment="Center" Margin="0,112,0,0" VerticalAlignment="Top" Height="44" Width="164" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
-        <Button Content="Edit" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="50" Width="265" Click="Button_Click" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+        <Button Content="Edit" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="50" Width="265" Click="EditExpense" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
