@@ -26,6 +26,7 @@ namespace frontend
             WelcomeLabel.Content = "Welcome, " + ((MainWindow)Application.Current.MainWindow).Username +"!";
             BalanceLabel.Content = ((MainWindow)Application.Current.MainWindow).ClientBalance.ToString();
             ExpenseLabel.Content = ((MainWindow)Application.Current.MainWindow).ClientExpense.ToString();
+            UserIdLabel.Content = "UserID: "+((MainWindow)Application.Current.MainWindow).UserId.ToString();
         }
 
         private void NavigateToEditBalance(object sender, RoutedEventArgs e)
@@ -44,5 +45,10 @@ namespace frontend
             popupWindow.Show();
         }
 
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).Logout();
+            ((MainWindow)Application.Current.MainWindow).Navigate("LandingPage");
+        }
     }
 }

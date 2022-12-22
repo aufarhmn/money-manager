@@ -67,7 +67,7 @@ namespace frontend.Pages
 
                 // Set the content of the request to a JSON object
                 int clientBalance = userBalance;
-                string json = "{\"clientBalance\":\"" + clientBalance + "\"}";
+                string json = "{\"clientBalance\":\"" + clientBalance + "\", \"id\":\"" + userId + "\"}";
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
 
                 // Write the content of the request to the request stream
