@@ -239,3 +239,5 @@ D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Newtons
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.csproj.CopyComplete
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\ConfirmDelete.g.cs
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\ConfirmDelete.baml
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\LogsPage.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\Pages\LogsPage.baml
