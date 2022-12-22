@@ -37,5 +37,12 @@ namespace frontend
         {
             ((MainWindow)Application.Current.MainWindow).Navigate("EditPengeluaran");
         }
+
+        private void ConfirmDeletePopUp(object sender, RoutedEventArgs e)
+        {
+            ConfirmDelete popupWindow = new ConfirmDelete();
+            popupWindow.Show();
+        }
+
     }
 }

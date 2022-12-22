@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="ConfirmDelete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\DashboardPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -37,6 +40,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ConfirmDelete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\DashboardPage.xaml">
       <SubType>Designer</SubType>
     </Page>

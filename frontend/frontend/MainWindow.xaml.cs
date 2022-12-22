@@ -96,5 +96,16 @@ namespace frontend
                 mainWindow.Navigate("DashboardPage");
             }
         }
+
+        private void ConfirmDeletePopUp(object sender, RoutedEventArgs e)
+        {
+            ConfirmDelete popupWindow = new ConfirmDelete();
+            popupWindow.Show();
+        }
+        public void Logout()
+        {
+            Username = null;
+
+        }
     }
 }

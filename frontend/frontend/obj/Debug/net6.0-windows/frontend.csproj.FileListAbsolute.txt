@@ -237,3 +237,5 @@ D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Microso
 D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Nancy.dll
 D:\KODONF\moneymanager-aspnet\frontend\frontend\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\frontend.csproj.CopyComplete
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\ConfirmDelete.g.cs
+D:\KODONF\moneymanager-aspnet\frontend\frontend\obj\Debug\net6.0-windows\ConfirmDelete.baml

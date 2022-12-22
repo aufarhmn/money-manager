@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\KODONF\moneymanager-aspnet\frontend\frontend\App.xaml
-12-1266163579
+13-2038574041
 
-14-193528812
+15-1876009537
 201-222501968
-MainWindow.xaml;Pages\CreatePage.xaml;Pages\CreatePengeluaran.xaml;Pages\dashboard.xaml;Pages\DashboardPage.xaml;Pages\EditPemasukan.xaml;Pages\EditPengeluaran.xaml;Pages\LandingPage.xaml;Pages\LoginPage.xaml;Pages\maindashboard.xaml;Pages\SignUp.xaml;Themes\Generic.xaml;
+ConfirmDelete.xaml;MainWindow.xaml;Pages\CreatePage.xaml;Pages\CreatePengeluaran.xaml;Pages\dashboard.xaml;Pages\DashboardPage.xaml;Pages\EditPemasukan.xaml;Pages\EditPengeluaran.xaml;Pages\LandingPage.xaml;Pages\LoginPage.xaml;Pages\maindashboard.xaml;Pages\SignUp.xaml;Themes\Generic.xaml;
 
 False
 
