@@ -28,6 +28,14 @@ namespace frontend
             ExpenseLabel.Content = ((MainWindow)Application.Current.MainWindow).ClientExpense.ToString();
         }
 
-        
+        private void NavigateToEditBalance(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).Navigate("EditPemasukan");
+        }
+
+        private void NavigateToEditExpense(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).Navigate("EditPengeluaran");
+        }
     }
 }
