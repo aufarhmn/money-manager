@@ -12,23 +12,23 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <Label x:Name="nama" Content="Nama Pemasukan" HorizontalAlignment="Left" Margin="111,84,0,0" VerticalAlignment="Top" Height="38" Width="167" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
-        <TextBox HorizontalAlignment="Left" Margin="302,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+        <Label Content="Nama Pemasukan" HorizontalAlignment="Center" Margin="0,82,0,0" Height="38" Width="226" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <TextBox x:Name="LogTitleTextBox" HorizontalAlignment="Center" Margin="0,120,0,0" TextWrapping="Wrap" Text="" Width="302" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0" VerticalAlignment="Top">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Label x:Name="pemasukan" Content="Jumlah Pemasukan" HorizontalAlignment="Left" Margin="102,161,0,0" VerticalAlignment="Top" Height="44" Width="186" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
-        <TextBox HorizontalAlignment="Left" Margin="302,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+        <Label Content="Jumlah Pemasukan" HorizontalAlignment="Center" Margin="0,173,0,0" Height="44" Width="252" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top" />
+        <TextBox x:Name="LogAmountTextBox" HorizontalAlignment="Center" Margin="0,217,0,0" TextWrapping="Wrap" Text="" Width="302" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0" VerticalAlignment="Top">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button Content="Create" HorizontalAlignment="Left" Margin="302,267,0,0" VerticalAlignment="Top" Height="50" Width="224" Click="Button_Click" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+        <Button Content="Create" HorizontalAlignment="Center" Margin="0,303,0,0" Height="50" Width="302" Click="AddLog" Background="#FF41FFB2" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"></Setter>

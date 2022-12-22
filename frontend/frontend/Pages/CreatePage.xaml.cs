@@ -25,9 +25,9 @@ namespace frontend
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddLog(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show(LogTitleTextBox.Text + ", " + LogAmountTextBox.Text);
         }
     }
 }

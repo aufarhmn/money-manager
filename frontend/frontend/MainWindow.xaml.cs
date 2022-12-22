@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -27,12 +28,31 @@ namespace frontend
             navframe.Navigate(new Uri("Pages/LandingPage.xaml", UriKind.Relative));
         }
 
+        public class Log
+        {
+            //Constructor
+            public Log() { }
+
+            //Attributes
+            private string title;
+            private int amount;
+
+            //Encapsulation
+            [JsonProperty("title")]
+            public string Title { get => title; set => title = value; }
+            [JsonProperty("amount")]
+            public int Amount { get => amount; set => amount = value; }
+
+
+        }
+
         //Attributes
         private string? username;
         private string? password;
         private int userId;
         private int clientBalance;
         private int clientExpense;
+        public List<Log> clientLog = new List<Log>();
 
 
         //Encapsulation

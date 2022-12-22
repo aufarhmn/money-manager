@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.CodeDom;
+using Nancy.Json;
 
 namespace frontend.Pages
 {
@@ -63,12 +64,22 @@ namespace frontend.Pages
                         var clientPass = response2["clientPass"].ToString();
                         var clientBalance = response2["clientBalance"].ToString();
                         var clientExpense = response2["clientExpense"].ToString();
-                        Trace.WriteLine(clientName);
                         mainWindow.Username = clientName;
                         mainWindow.UserId = clientId;
                         mainWindow.Password = clientPass;
                         mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
                         mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
+                        var list = JsonConvert.DeserializeObject<List<MainWindow.Log>>(response2["clientLog"].ToString());
+                        //Store each log in a mainWindow.clientLog
+                        foreach (var log in list)
+                        {
+                            mainWindow.clientLog.Add(log);
+                        }
+                        //Test print
+                        foreach (var log in mainWindow.clientLog)
+                        {
+                            Trace.WriteLine(log.Title + ", " + log.Amount);
+                        }
                     }
                     else
                     {

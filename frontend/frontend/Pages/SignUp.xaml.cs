@@ -73,7 +73,10 @@ namespace frontend.Pages
                     string json = new JavaScriptSerializer().Serialize(new
                     {
                         clientName = $"{newUser.ClientName}",
-                        clientPass = $"{newUser.ClientPass}"
+                        clientPass = $"{newUser.ClientPass}",
+                        clientBalance = 0,
+                        clientExpense = 0,
+                        clientLog = "[]"
                     });
 
                     streamWriter.Write(json);
