@@ -23,6 +23,13 @@ namespace frontend.Pages
         public LogsPage()
         {
             InitializeComponent();
+            var mainWindow = ((MainWindow)Application.Current.MainWindow);
+            string logsMapping = "";
+            foreach (var log in mainWindow.clientLog)
+            {
+                logsMapping += "> " + log.Title + ", amount: " + log.Amount + "\n";
+            }
+            LogsMap.Text = logsMapping;
         }
 
         private void NavigateToAddLog(object sender, RoutedEventArgs e)
