@@ -12,23 +12,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <Label x:Name="nama" Content="Nama Pemasukan" HorizontalAlignment="Left" Margin="111,84,0,0" VerticalAlignment="Top" Height="38" Width="167" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
-        <TextBox HorizontalAlignment="Left" Margin="302,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+        <Label Content="Set Jumlah Uang" HorizontalAlignment="Center" Margin="0,112,0,0" VerticalAlignment="Top" Height="44" Width="170" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
+        <TextBox x:Name="SetBalanceTextBox" HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Label x:Name="pemasukan" Content="Jumlah Pemasukan" HorizontalAlignment="Left" Margin="102,161,0,0" VerticalAlignment="Top" Height="44" Width="186" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
-        <TextBox HorizontalAlignment="Left" Margin="302,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
-            <TextBox.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="302,267,0,0" VerticalAlignment="Top" Height="50" Width="224" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+        <Button Click="EditBalance" Content="Edit" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="50" Width="260" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

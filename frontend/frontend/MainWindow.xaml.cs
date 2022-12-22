@@ -28,7 +28,8 @@ namespace frontend
         }
 
         //Attributes
-        private string username;
+        private string? username;
+        private int userId;
         private int clientBalance;
         private int clientExpense;
 
@@ -38,6 +39,11 @@ namespace frontend
         {
             get { return username; }
             set { username = value; }
+        }
+        public int UserId
+        {
+            get { return userId; }
+            set { userId = value; }
         }
         public int ClientBalance
         {
@@ -75,6 +81,19 @@ namespace frontend
             else
             {
                 MessageBox.Show("Please authenticate yourself.");
+            }
+        }
+
+        private void NavigateToHome(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            if(mainWindow.Username == null)
+            {
+                mainWindow.Navigate("LandingPage");
+            }
+            else
+            {
+                mainWindow.Navigate("DashboardPage");
             }
         }
     }

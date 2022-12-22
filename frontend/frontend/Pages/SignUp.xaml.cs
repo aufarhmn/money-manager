@@ -39,10 +39,10 @@ namespace frontend.Pages
         {
             // Attributes
             private int id;
-            private string clientName;
-            private string clientPass;
-            private string clientBalance;
-            private string clientExpense;
+            private string? clientName;
+            private string? clientPass;
+            private string? clientBalance;
+            private string? clientExpense;
 
             // Encapsulation
             public int Id { get => id; set => id = value; }
