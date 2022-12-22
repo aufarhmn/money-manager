@@ -46,6 +46,7 @@ namespace frontend.Pages
         { 
             try
             {
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
                 //NaN protection
                 if (!int.TryParse(SetBalanceTextBox.Text, out int value) || Convert.ToInt32(SetBalanceTextBox.Text) < 0)
                 {
@@ -67,7 +68,14 @@ namespace frontend.Pages
 
                 // Set the content of the request to a JSON object
                 int clientBalance = userBalance;
-                string json = "{\"clientBalance\":\"" + clientBalance + "\", \"id\":\"" + userId + "\"}";
+                string json = new JavaScriptSerializer().Serialize(new
+                {
+                    id = userId,
+                    clientName = $"{mainWindow.Username}",
+                    clientPass = $"{mainWindow.Password}",
+                    clientBalance = $"{clientBalance}",
+                    clientExpense = $"{mainWindow.ClientExpense}"
+                });
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
 
                 // Write the content of the request to the request stream
@@ -87,6 +95,22 @@ namespace frontend.Pages
                         string responseString = reader.ReadToEnd();
                     }
                 }
+
+                // update money in dashboard (relog basically)
+                string url = $"https://localhost:7118/api/Clients/getByName/{mainWindow.Username}";
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "GET";
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    JObject response2 = JObject.Parse(result);
+                    mainWindow.ClientBalance = Convert.ToInt32(response2["clientBalance"]);
+                    mainWindow.ClientExpense = Convert.ToInt32(response2["clientExpense"]);
+                    mainWindow.Navigate("DashboardPage");
+                }
+
             }
             catch(Exception ex)
             {

@@ -29,6 +29,7 @@ namespace frontend
 
         //Attributes
         private string? username;
+        private string? password;
         private int userId;
         private int clientBalance;
         private int clientExpense;
@@ -39,6 +40,11 @@ namespace frontend
         {
             get { return username; }
             set { username = value; }
+        }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
         }
         public int UserId
         {
@@ -80,7 +86,7 @@ namespace frontend
             }
             else
             {
-                MessageBox.Show("Please authenticate yourself.");
+                MessageBox.Show("Please login first.");
             }
         }
 
