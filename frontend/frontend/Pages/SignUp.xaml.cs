@@ -55,17 +55,6 @@ namespace frontend.Pages
             public User() { }
         }
 
-        //public void RegisterNewUser()
-        //{
-        //    User newUser = new User();
-        //    newUser.Id = Convert.ToInt32(DateTime.Now);
-        //    newUser.ClientName = UsernameTextBox.Text;
-        //    newUser.ClientPass = PasswordBox.Password;
-        //    newUser.ClientBalance = 0.ToString();
-        //    newUser.ClientExpense = 0.ToString();
-        //
-        //    string userJson = JsonConvert.SerializeObject(newUser, Formatting.Indented);
-        //}
 
         private void Sign_Up(object sender, RoutedEventArgs e)
         {
@@ -83,11 +72,29 @@ namespace frontend.Pages
                 {
                     string json = new JavaScriptSerializer().Serialize(new
                     {
-                        clientName = $"{UsernameTextBox.Text}",
-                        clientPass = $"{PasswordBox.Password}"
+                        clientName = $"{newUser.ClientName}",
+                        clientPass = $"{newUser.ClientPass}"
                     });
 
                     streamWriter.Write(json);
+                }
+
+                // Check for duplicate usernames
+                var reqAllUsers = (HttpWebRequest)WebRequest.Create("https://localhost:7118/api/Clients/getAll");
+
+
+                using (var streamReader = new StreamReader(reqAllUsers.GetResponse().GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    var users = JsonConvert.DeserializeObject<List<User>>(result);
+
+                    foreach (var user in users)
+                    {
+                        if (user.ClientName == newUser.ClientName)
+                        {
+                            throw new Exception("username already exist.");
+                        }
+                    }
                 }
 
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -98,7 +105,7 @@ namespace frontend.Pages
                     //TODO: FIX ME TO HANDLE IF FORM ISNT FILLED PROPERLY
                     if (result != null)
                     {
-                        MessageBox.Show("Registration Succses, Please Login");
+                        MessageBox.Show("Registration Success, Please Login");
                         var mainWindow = (MainWindow)Application.Current.MainWindow;
                         mainWindow.Navigate("LoginPage");
                     }
@@ -106,14 +113,7 @@ namespace frontend.Pages
             }
             catch (Exception ex)
             {
-                if(ex.Message.Contains("500"))
-                {
-                    MessageBox.Show("There are problems in the server");
-                }
-                else
-                {
-                    MessageBox.Show("Something went wrong");
-                }
+                MessageBox.Show(ex.Message);
             }
 
         }
