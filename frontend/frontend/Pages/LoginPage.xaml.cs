@@ -59,12 +59,10 @@ namespace frontend.Pages
 
                         mainWindow.Navigate("DashboardPage");
                         var clientName = response2["clientName"].ToString();
-                        var clientId = Convert.ToInt32(response2["id"]);
                         var clientBalance = response2["clientBalance"].ToString();
                         var clientExpense = response2["clientExpense"].ToString();
                         Trace.WriteLine(clientName);
                         mainWindow.Username = clientName;
-                        mainWindow.UserId = clientId;
                         mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
                         mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
                     }

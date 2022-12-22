@@ -12,15 +12,39 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <TextBox x:Name="SetExpenseTextBox" HorizontalAlignment="Center" Margin="0,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="338" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+        <Label x:Name="nama" Content="Nama Pengeluaran" HorizontalAlignment="Left" Margin="111,84,0,0" VerticalAlignment="Top" Height="38" Width="188" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
+        <TextBox HorizontalAlignment="Left" Margin="329,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Label x:Name="ExpenseLabel" Content="Set Pengeluaran" HorizontalAlignment="Center" Margin="0,112,0,0" VerticalAlignment="Top" Height="44" Width="164" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
-        <Button Content="Edit" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="50" Width="265" Click="Button_Click" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
+        <Label x:Name="pengeluaran" Content="Jumlah Pengeluaran" HorizontalAlignment="Left" Margin="102,161,0,0" VerticalAlignment="Top" Height="44" Width="197" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
+        <TextBox HorizontalAlignment="Left" Margin="329,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label x:Name="nama_Copy" Content="Nama Pengeluaran" HorizontalAlignment="Left" Margin="111,84,0,0" VerticalAlignment="Top" Height="38" Width="188" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
+        <TextBox HorizontalAlignment="Left" Margin="329,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label x:Name="pengeluaran_Copy" Content="Jumlah Pengeluaran" HorizontalAlignment="Left" Margin="102,161,0,0" VerticalAlignment="Top" Height="44" Width="197" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" />
+        <TextBox HorizontalAlignment="Left" Margin="329,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="329,272,0,0" VerticalAlignment="Top" Height="50" Width="224" Click="Button_Click" Background="#FF41FFF1" BorderBrush="#FF41FFB2" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
