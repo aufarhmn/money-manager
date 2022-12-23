@@ -12,7 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <Label Content="Nama Pemasukan" HorizontalAlignment="Center" Margin="0,82,0,0" Height="38" Width="226" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <Label Content="Nama Pemasukan / Pengeluaran" HorizontalAlignment="Center" Margin="0,82,0,0" Height="38" Width="302" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
         <TextBox x:Name="LogTitleTextBox" HorizontalAlignment="Center" Margin="0,120,0,0" TextWrapping="Wrap" Text="" Width="302" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0" VerticalAlignment="Top">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -20,7 +20,7 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Label Content="Jumlah Pemasukan" HorizontalAlignment="Center" Margin="0,173,0,0" Height="44" Width="252" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top" />
+        <Label Content="Jumlah Pemasukan / Pengeluaran" HorizontalAlignment="Center" Margin="0,173,0,0" Height="44" Width="322" FontSize="20" Foreground="White" FontFamily="Comic Sans MS" VerticalAlignment="Top" />
         <TextBox x:Name="LogAmountTextBox" HorizontalAlignment="Center" Margin="0,217,0,0" TextWrapping="Wrap" Text="" Width="302" Height="44" Opacity="0.8" FontFamily="Comic Sans MS" FontSize="14" VerticalContentAlignment="Center" Padding="10,0,0,0" VerticalAlignment="Top">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -35,5 +35,6 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Label  Content="*masukkan nilai positif untuk pemasukan, negatif untuk pengeluaran" HorizontalAlignment="Center" Height="32" Margin="0,266,0,0" VerticalAlignment="Top" Width="388" FontFamily="Comic Sans MS" Foreground="White"/>
     </Grid>
 </Page>
