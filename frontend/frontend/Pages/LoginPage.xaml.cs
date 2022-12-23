@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.CodeDom;
 using Nancy.Json;
+using TransactionValidation;
 
 namespace frontend.Pages
 {
@@ -53,41 +54,54 @@ namespace frontend.Pages
                     var response = new WebClient().DownloadString(url);
                     JObject response2 = JObject.Parse(response);
 
-                    if (response2["clientPass"].ToString() == password)
+                    if (response2["clientPass"].ToString() != password)
                     {
-                        var mainWindow = (MainWindow)Application.Current.MainWindow;
-                        MessageBox.Show("Login Success, Welcome " + username);
-
-                        mainWindow.Navigate("DashboardPage");
-                        var clientName = response2["clientName"].ToString();
-                        var clientId = Convert.ToInt32(response2["id"]);
-                        var clientPass = response2["clientPass"].ToString();
-                        var clientBalance = response2["clientBalance"].ToString();
-                        var clientExpense = response2["clientExpense"].ToString();
-                        mainWindow.Username = clientName;
-                        mainWindow.UserId = clientId;
-                        mainWindow.Password = clientPass;
-                        mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
-                        mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
-                        var list = JsonConvert.DeserializeObject<List<MainWindow.Log>>(response2["clientLog"].ToString());
-                        //Store each log in a mainWindow.clientLog
-                        foreach (var log in list)
-                        {
-                            mainWindow.clientLog.Add(log);
-                        }
-                        //Test print
-                        foreach (var log in mainWindow.clientLog)
-                        {
-                            Trace.WriteLine(log.Title + ", " + log.Amount);
-                        }
-                    }
-                    else
-                    {
-                        //make an exception that password is incorrect
                         throw new Exception("Wrong password");
                     }
+                    
+                    var mainWindow = (MainWindow)Application.Current.MainWindow;
+                    MessageBox.Show("Login Success, Welcome " + username);
+
+                    Trace.WriteLine(response2);
+
+                    mainWindow.Navigate("DashboardPage");
+                    var clientName = response2["clientName"].ToString();
+                    var clientId = Convert.ToInt32(response2["id"]);
+                    var clientPass = response2["clientPass"].ToString();
+                    var clientBalance = response2["clientBalance"].ToString();
+                    var clientExpense = response2["clientExpense"].ToString();
+                    mainWindow.Username = clientName;
+                    mainWindow.UserId = clientId;
+                    mainWindow.Password = clientPass;
+                    mainWindow.ClientBalance = Convert.ToInt32(clientBalance);
+                    mainWindow.ClientExpense = Convert.ToInt32(clientExpense);
+                    var list = JsonConvert.DeserializeObject<List<MainWindow.Log>>(response2["clientLog"].ToString());
+                    //Store each log in a mainWindow.clientLog
+                    foreach (var log in list)
+                    {
+                        mainWindow.clientLog.Add(log);
+                    }
+                    //Test print
+                    foreach (var log in mainWindow.clientLog)
+                    {
+                        Trace.WriteLine(log.Title + ", " + log.Amount);
+                    }
+                    Transaction transactionValidate = new Transaction();
+                    if (!transactionValidate.cekPemasukanNegatif(Convert.ToDouble(clientBalance)))
+                    {
+                        MessageBox.Show("Warning: Balance anda bernilai negatif, perbaiki segera");
+                    }
+                    if (!transactionValidate.cekPengeluaranNegatif(Convert.ToDouble(clientBalance)))
+                    {
+                        MessageBox.Show("Warning: Pengeluaran anda bernilai negatif, perbaiki segera");
+                    }
+                    if (!transactionValidate.cekPengeluaranLebihBesarPemasukan(Convert.ToDouble(clientBalance), Convert.ToDouble(clientExpense)))
+                    {
+                        MessageBox.Show("Warning: Balance anda lebih kecil dari pengeluaran anda");
+                    }
+
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     if(ex.Message.Contains("404"))
                     {
@@ -97,7 +111,7 @@ namespace frontend.Pages
                         MessageBox.Show("Internal Server Error");
                     } else
                     {
-                        MessageBox.Show("Wrong password");
+                        MessageBox.Show(ex.Message);
                     }
                     
                 }

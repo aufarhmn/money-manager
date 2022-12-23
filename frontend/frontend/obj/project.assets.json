@@ -1679,6 +1679,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TransactionValidationForMoneyManagerPBO/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/TransactionValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/TransactionValidation.dll": {}
+        }
       }
     }
   },
@@ -5657,13 +5666,26 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "TransactionValidationForMoneyManagerPBO/1.0.0": {
+      "sha512": "chttBZnj0DYM7IAkVnIFUcUsB8nr7ygeMV5JAOCyyqnDAwtskr4AttSu994Ar3Ei3HYqYsPTtXwF0JBEwnMYiQ==",
+      "type": "package",
+      "path": "transactionvalidationformoneymanagerpbo/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/TransactionValidation.dll",
+        "transactionvalidationformoneymanagerpbo.1.0.0.nupkg.sha512",
+        "transactionvalidationformoneymanagerpbo.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Flurl.Http >= 4.0.0-pre3",
       "Nancy >= 2.0.0",
-      "Newtonsoft.Json >= 13.0.2"
+      "Newtonsoft.Json >= 13.0.2",
+      "TransactionValidationForMoneyManagerPBO >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5716,6 +5738,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
+          },
+          "TransactionValidationForMoneyManagerPBO": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

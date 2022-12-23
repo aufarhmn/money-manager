@@ -16,6 +16,7 @@
     <PackageReference Include="Flurl.Http" Version="4.0.0-pre3" />
     <PackageReference Include="Nancy" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="TransactionValidationForMoneyManagerPBO" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

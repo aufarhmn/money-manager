@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z4xStA9iwNSHaH8VGSlm0ZFv8CZVWa3tNMswr9TSYgy9ElyjGi4qdcbdmmqeU/OQVK5Nf3Oum+hRxMWjfI1zJw==",
+  "dgSpecHash": "e9VqDYIJZZwDuTXRTKeK+r9tiAY1Rf02Qx1Kg6xrkSOqa3xTYXA7kEeDuLUxPSQUEnhIWaK1NoILssmXyMrbUA==",
   "success": true,
   "projectFilePath": "D:\\KODONF\\moneymanager-aspnet\\frontend\\frontend\\frontend.csproj",
   "expectedPackageFiles": [
@@ -95,7 +95,8 @@
     "C:\\Users\\Mocha\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Mocha\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Mocha\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mocha\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Mocha\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Mocha\\.nuget\\packages\\transactionvalidationformoneymanagerpbo\\1.0.0\\transactionvalidationformoneymanagerpbo.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
