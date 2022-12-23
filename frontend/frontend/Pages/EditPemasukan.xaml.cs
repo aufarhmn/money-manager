@@ -73,8 +73,8 @@ namespace frontend.Pages
                     id = userId,
                     clientName = $"{mainWindow.Username}",
                     clientPass = $"{mainWindow.Password}",
-                    clientBalance = $"{clientBalance}",
-                    clientExpense = $"{mainWindow.ClientExpense}"
+                    clientBalance = clientBalance,
+                    clientExpense = mainWindow.ClientExpense
                 });
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
 
