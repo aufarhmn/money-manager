@@ -24,7 +24,8 @@ There is two solution that you can run, the first one is the backend and the sec
 `"Server=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Kuliah\\Materi dan Tugas\\Sem 3\\Pemrograman Berbasis Obyek\\Source\\MoneyManager-Monorepo\\moneymanager-aspnet\\backend\\ClientDataAPI\\ClientDetails.mdf\";Trusted_Connection=True;MultipleActiveResultSets=true"` <br><br>
 If you look closely, you can see that there is a directory that point to the database. You can change this directory to your local database directory. For example, if you want to change the directory to `C:\\Users\\User\\Documents\\ClientDetails.mdf`, you can change the directory to <br><br>
 `"Server=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\Documents\\ClientDetails.mdf\";Trusted_Connection=True;MultipleActiveResultSets=true"` <br> <br>
-2. If you have any question, please kindly inform us
+2. Video Demonstartion of this app can be found on this link [https://youtu.be/ztISL8haFT4](https://youtu.be/ztISL8haFT4)
+3. If you have any question, please kindly inform us
 
 <br>
 
