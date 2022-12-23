@@ -132,7 +132,11 @@ namespace frontend
         public void Logout()
         {
             Username = null;
-
+            Password = null;
+            UserId = 0;
+            ClientBalance = 0;
+            ClientExpense = 0;
+            clientLog.Clear();
         }
     }
 }
