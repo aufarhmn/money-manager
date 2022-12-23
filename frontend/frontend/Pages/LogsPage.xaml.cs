@@ -25,9 +25,11 @@ namespace frontend.Pages
             InitializeComponent();
             var mainWindow = ((MainWindow)Application.Current.MainWindow);
             string logsMapping = "";
+            int index = 1;
             foreach (var log in mainWindow.clientLog)
             {
-                logsMapping += "> " + log.Title + ", amount: " + log.Amount + "\n";
+                logsMapping += index.ToString() +". " + log.Title + ", amount: " + log.Amount + "\n";
+                index += 1;
             }
             LogsMap.Text = logsMapping;
         }

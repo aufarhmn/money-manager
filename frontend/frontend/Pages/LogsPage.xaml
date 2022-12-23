@@ -12,24 +12,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pages/background.png"/>
         </Grid.Background>
-        <Label x:Name="nama" Content="Nama Aktivitas" HorizontalAlignment="Left" Margin="98,118,0,0" VerticalAlignment="Top" Height="35" Width="153" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Label x:Name="jumlahUang" Content="Rp 100.000" HorizontalAlignment="Left" Margin="98,156,0,0" VerticalAlignment="Top" Height="35" Width="153" FontSize="18" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="256,157,0,0" VerticalAlignment="Top" Height="34" Width="74" Background="#FFF1FF00">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="8"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="339,157,0,0" VerticalAlignment="Top" Height="34" Width="74" Background="#FFFF4C4C" Foreground="White">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="8"/>
-                </Style>
-            </Button.Resources>
-        </Button>
         <Label x:Name="judulList" Content="List Log" HorizontalAlignment="Left" Margin="98,47,0,0" VerticalAlignment="Top" Height="66" Width="153" FontSize="36" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Label x:Name="dateCreated" Content="Created: 15 December 2022 10.00 WIB" HorizontalAlignment="Left" Margin="98,196,0,0" VerticalAlignment="Top" Height="35" Width="278" FontFamily="Comic Sans MS" Foreground="White"/>
         <Button Content="Add Log" HorizontalAlignment="Left" Margin="456,58,0,0" VerticalAlignment="Top" Height="34" Width="110" Background="#FF1DF803" Click="NavigateToAddLog" BorderBrush="#FF1DF803">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -37,24 +20,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Label x:Name="nama_Copy" Content="Nama Aktivitas" HorizontalAlignment="Left" Margin="98,245,0,0" VerticalAlignment="Top" Height="35" Width="153" FontSize="20" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Label x:Name="jumlahUang_Copy" Content="Rp 100.000" HorizontalAlignment="Left" Margin="98,283,0,0" VerticalAlignment="Top" Height="35" Width="153" FontSize="18" Foreground="White" FontFamily="Comic Sans MS"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="256,284,0,0" VerticalAlignment="Top" Height="34" Width="74" Background="#FFF1FF00">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="8"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="339,284,0,0" VerticalAlignment="Top" Height="34" Width="74" Background="#FFFF4C4C" Foreground="White">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="8"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Label x:Name="dateCreated_Copy" Content="Created: 15 December 2022 10.00 WIB" HorizontalAlignment="Left" Margin="98,323,0,0" VerticalAlignment="Top" Height="35" Width="278" FontFamily="Comic Sans MS" Foreground="White"/>
-        <TextBlock x:Name="LogsMap" HorizontalAlignment="Left" Height="223" Margin="511,135,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="235" Background="White"/>
+        <TextBlock Padding="10" x:Name="LogsMap" HorizontalAlignment="Left" Height="223" Margin="98,135,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="648" Background="White" Opacity="0.8"/>
 
     </Grid>
 </Page>

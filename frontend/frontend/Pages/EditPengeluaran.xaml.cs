@@ -1,4 +1,5 @@
 ﻿using Nancy.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -45,14 +46,20 @@ namespace frontend
 
                 string apiUrl = $"https://localhost:7118/api/Clients/putById/{mainWindow.UserId}";
 
-                // Create a new HttpWebRequest object
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiUrl);
-
-                // Set the method to PUT
                 request.Method = "PUT";
-
-                // Set the content type to application/json
                 request.ContentType = "application/json";
+
+                // Serialize Logs
+                var currentUserLog = mainWindow.clientLog;
+                StringWriter stringWriter = new StringWriter();
+                using (JsonTextWriter jsonWriter = new JsonTextWriter(stringWriter))
+                {
+                    jsonWriter.QuoteChar = '\'';
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(jsonWriter, currentUserLog);
+                }
+                string currentUserLogJson = stringWriter.ToString();
 
                 // Set the content of the request to a JSON object
                 string json = new JavaScriptSerializer().Serialize(new
@@ -62,7 +69,7 @@ namespace frontend
                     clientPass = $"{mainWindow.Password}",
                     clientBalance = $"{mainWindow.ClientBalance}",
                     clientExpense = $"{userExpense}",
-                    clientLog = "[]"
+                    clientLog = $"{currentUserLogJson}"
                 });
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
 
@@ -71,8 +78,6 @@ namespace frontend
                 {
                     requestStream.Write(jsonBytes, 0, jsonBytes.Length);
                 }
-
-                MessageBox.Show(json);
 
                 //Send the PUT request to the API and get the response
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())

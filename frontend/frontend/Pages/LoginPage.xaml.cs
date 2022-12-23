@@ -62,8 +62,6 @@ namespace frontend.Pages
                     var mainWindow = (MainWindow)Application.Current.MainWindow;
                     MessageBox.Show("Login Success, Welcome " + username);
 
-                    Trace.WriteLine(response2);
-
                     mainWindow.Navigate("DashboardPage");
                     var clientName = response2["clientName"].ToString();
                     var clientId = Convert.ToInt32(response2["id"]);
@@ -80,11 +78,6 @@ namespace frontend.Pages
                     foreach (var log in list)
                     {
                         mainWindow.clientLog.Add(log);
-                    }
-                    //Test print
-                    foreach (var log in mainWindow.clientLog)
-                    {
-                        Trace.WriteLine(log.Title + ", " + log.Amount);
                     }
                     Transaction transactionValidate = new Transaction();
                     if (!transactionValidate.cekPemasukanNegatif(Convert.ToDouble(clientBalance)))

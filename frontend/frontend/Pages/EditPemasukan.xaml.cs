@@ -66,16 +66,26 @@ namespace frontend.Pages
                 // Set the content type to application/json
                 request.ContentType = "application/json";
 
+                // Serialize Logs
+                var currentUserLog = mainWindow.clientLog;
+                StringWriter stringWriter = new StringWriter();
+                using (JsonTextWriter jsonWriter = new JsonTextWriter(stringWriter))
+                {
+                    jsonWriter.QuoteChar = '\'';
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(jsonWriter, currentUserLog);
+                }
+                string currentUserLogJson = stringWriter.ToString();
+
                 // Set the content of the request to a JSON object
-                int clientBalance = userBalance;
                 string json = new JavaScriptSerializer().Serialize(new
                 {
-                    id = userId,
+                    id = mainWindow.UserId,
                     clientName = $"{mainWindow.Username}",
                     clientPass = $"{mainWindow.Password}",
-                    clientBalance = clientBalance,
-                    clientExpense = mainWindow.ClientExpense,
-                    clientLog = "[]"
+                    clientBalance = $"{userBalance}",
+                    clientExpense = $"{mainWindow.ClientExpense}",
+                    clientLog = $"{currentUserLogJson}"
                 });
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
 

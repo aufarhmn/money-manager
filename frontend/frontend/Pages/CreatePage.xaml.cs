@@ -34,7 +34,6 @@ namespace frontend
 
         private void AddLog(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(LogTitleTextBox.Text + ", " + LogAmountTextBox.Text);
 
             var mainWindow = ((MainWindow)Application.Current.MainWindow);
 
@@ -53,7 +52,8 @@ namespace frontend
                     newLogTitle = LogTitleTextBox.Text;
                 }
 
-                if (int.TryParse(LogAmountTextBox.Text, out int n)) {
+                if (int.TryParse(LogAmountTextBox.Text, out int n))
+                {
                     newLogAmount = n;
                 }
                 else
@@ -75,7 +75,38 @@ namespace frontend
                 request.Method = "PUT";
                 request.ContentType = "application/json";
 
-                Trace.WriteLine(apiUrl);
+
+                // Create a new StringWriter object
+                StringWriter stringWriter = new StringWriter();
+
+                // Create a new JsonTextWriter object
+                using (JsonTextWriter jsonWriter = new JsonTextWriter(stringWriter))
+                {
+                    // Set the QuoteChar property to '
+                    jsonWriter.QuoteChar = '\'';
+
+                    // Serialize the object to the JsonTextWriter
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(jsonWriter, currentUserLog);
+                }
+
+                // Get the JSON string from the StringWriter
+                string currentUserLogJson = stringWriter.ToString();
+
+                if (newLogAmount < 0 && mainWindow.ClientBalance + newLogAmount < 0)
+                {
+                    throw new Exception("You don't have enough money to spend that much");
+                }
+
+                if(newLogAmount > 0)
+                {
+                    mainWindow.ClientBalance += newLogAmount;
+                } else
+                {
+                    mainWindow.ClientExpense -= newLogAmount;
+                    mainWindow.ClientBalance += newLogAmount;
+                }
+
 
                 string json = new JavaScriptSerializer().Serialize(new
                 {
@@ -84,17 +115,15 @@ namespace frontend
                     clientPass = $"{mainWindow.Password}",
                     clientBalance = mainWindow.ClientBalance,
                     clientExpense = mainWindow.ClientExpense,
-                    clientLog = currentUserLog
+                    clientLog = $"{currentUserLogJson}"
                 }); ;
                 byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
-
-                Trace.WriteLine(json);
-
+                
                 using (Stream requestStream = request.GetRequestStream())
                 {
                     requestStream.Write(jsonBytes, 0, jsonBytes.Length);
                 }
-
+                
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
                     // Read the response as a string
@@ -104,11 +133,12 @@ namespace frontend
                     }
                 }
 
+                mainWindow.Navigate("LogsPage");
+
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                Trace.WriteLine(ex.InnerException);
             }
         }
     }
