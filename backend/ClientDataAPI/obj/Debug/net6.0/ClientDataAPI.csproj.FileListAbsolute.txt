@@ -410,3 +410,4 @@ D:\KODONF\moneymanager-aspnet\backend\ClientDataAPI\obj\Debug\net6.0\refint\Clie
 D:\KODONF\moneymanager-aspnet\backend\ClientDataAPI\obj\Debug\net6.0\ClientDataAPI.pdb
 D:\KODONF\moneymanager-aspnet\backend\ClientDataAPI\obj\Debug\net6.0\ClientDataAPI.genruntimeconfig.cache
 D:\KODONF\moneymanager-aspnet\backend\ClientDataAPI\obj\Debug\net6.0\ref\ClientDataAPI.dll
+D:\Kuliah\Materi dan Tugas\Sem 3\Pemrograman Berbasis Obyek\Source\MoneyManager-Monorepo\moneymanager-aspnet\backend\ClientDataAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
